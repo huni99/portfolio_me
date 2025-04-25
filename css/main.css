@@ -1,0 +1,632 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+img {
+  display: block;
+}
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family:"Noto Sans KR", sans-serif;
+  font-size: 16px;
+}
+.scroll{
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0;
+}
+.font-en{
+  font-family:"Open Sans",sans-serif;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+.container{
+  width: 1200px;
+  margin:0 auto;
+  height: 950px;
+}
+div h2{
+  font-size: 60px;
+  
+  color: #425a73;
+}
+.menu_icon{
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.menu {
+  width: 100vw;
+  padding :10px 30px;
+  display: flex;
+  top:0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 4;
+}
+.menu ul{
+  font-weight: bold;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#000;
+  font-size: 24px;
+  top:-30px;
+  left:25%;
+  opacity:0;
+  transition:.5s ;
+}
+/* 각 메뉴 선택시 색상이 바뀌면서 아래 화면에 출력 */
+.menu ul.clicked{
+  top:20px;
+  opacity: 1;
+}  
+
+.menu ul li{
+  cursor: pointer;
+  white-space: nowrap;
+  margin-left: 70px;
+  position: relative;
+  top:0;
+  transition: .5s;
+}
+.menu ul li:hover {
+  transform: translateY(-5px);
+}
+.menu ul li:hover a{
+  color :#425a73;
+}
+.menu ul li:hover::after{
+  display: block;
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #bbdcfb;
+  width: 100%;
+  bottom: -10px;
+}
+#home{
+  /* 나중에 home 백그라운드 이미지 삽입 */
+  background-image: url(../img/sea.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* background-color: #bbdcfb; */
+  height: 950px;
+}
+.container-2{
+  height: 100%;
+  position: relative;
+}
+.container-2 p:first-child{
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  transform: rotate(90deg);
+  font-size: 30px;
+  font-weight: 200;
+}
+.container-2 p:nth-child(2){
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  
+  font-size: 30px;
+  font-weight: 200;
+}
+.container-2 h1{
+  font-size: 120px;
+  color: #425a73;
+  position: absolute;
+  bottom:100px;
+  left: 100px;
+}
+
+/* about_me */
+
+
+#about_me{
+  /* background-color: white; */
+  height: 950px;
+  
+}
+.container-3{
+  padding-top: 150px;
+  /* margin-top: 200px; */
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about_me_left{
+  width: 500px;
+  padding-right: 100px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  
+  
+}
+.about_me_left img{
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+.about_me_left_bg{
+  background-color: #bbdcfb;
+  width: 1000px;
+  height: 460px;
+  position: absolute;
+  z-index:-1;
+}
+.about_me_left img,
+.about_me_left h2{
+  transform: translate(80px,-30px);
+}
+
+
+
+.about_me_right{
+  width: 500px;
+  height: 460px;
+  display: flex;
+  position: relative;
+  justify-content: start;
+  align-items: center;
+  
+}
+.about_me_right li{
+  display: block;
+  margin: 30px 0 0 100px;
+  line-height: 26px;
+  
+  
+}
+.arrow{
+  position: absolute;
+  z-index: 2;
+
+  top: 0;
+  right: 0;
+}
+.arrow_com{
+  font-size: 30px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.arrow_off{
+  color:gray;
+}
+.about_me_right .text{
+  transition:  .5s;
+  position: absolute;
+  top:60px;
+  opacity: 0;
+} 
+.about_me_right .text.text_on{
+  opacity: 1;
+  
+}
+
+/* skill */
+
+#skills{
+  width: 100%;
+  height: 950px;
+}
+.skills .container-4{
+  position: relative;
+  padding-top: 100px;
+  height: 100%;
+}
+.container-4 h2 {
+
+  text-align: center;
+
+}
+.container-4 h3{
+  text-align: center;
+  margin: 100px 0 60px 0;
+  font-size: 40px;
+  
+}
+.skill-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items:start ;
+}
+.skill-content ul li:first-child{
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+  }
+
+.skill-content li:nth-child(1) ul li:first-child{
+  background-image: url(../img/skills_1.png);
+}
+.skill-content li:nth-child(2) ul li:first-child{
+  background-image: url(../img/skills_2.png);
+}
+.skill-content li:nth-child(3) ul li:first-child{
+  background-image: url(../img/skills_3.png);
+}
+.skill-content li:nth-child(4) ul li:first-child{
+  background-image: url(../img/skills_4.png);
+}
+.skill-content li ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill-content li ul li{
+  margin-bottom: 30px;
+}
+.skill-content h4{
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+/* project */
+#project{
+  background-color: #e3edf8;
+  height: 950px;
+  width: 100%;
+}
+
+.container-5 h2{
+  padding-top: 100px;
+  text-align: center;
+}
+.container-5{
+  height: 100%;
+}
+.project_box{
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+.projectEl{
+  width: 40%;
+  height: 40%;
+  border: 1px #000 solid;
+  border-radius:15px ;
+  box-shadow: 3px 3px 1px #666;
+  position: absolute;
+  opacity: 0;
+  transition: transform 0.5s ,opacity 0.5s ;
+  transform: translateY(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.projectEl img{
+  width: 60%;
+  
+  height: 80%;
+  object-fit: contain;
+}
+.projectEl1{
+  top:30px;
+  left:30px;
+  transition-delay: 0.2s;
+  z-index: 2;
+
+}
+.projectEl1 img{
+  width: 60%;
+  margin-right:60px ;
+  border-radius: 10px;
+}
+.projectEl1 .btn-web{
+  border:3px white solid;
+  border-radius: 5px;
+  padding:5px 15px ;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  
+}
+.projectEl2{
+  top:30px;
+  right:30px;
+  transition-delay: 0.4s;
+}
+.projectEl3{
+  bottom:10px;
+  left:30px;
+  transition-delay: 0.6s;
+}
+.projectEl4{
+  bottom:10px;
+  right:30px;
+  transition-delay: 0.8s;
+}
+
+.project.show .projectEl{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+
+/* contact */
+#contact{
+  height:900px;
+}
+#contact .btn-modal{
+  
+  margin-top: 150px;
+  width: 400px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.modal .btn-close{
+  cursor: pointer;
+}
+.lamp{
+  position: absolute;
+  width: 80px;
+  border-radius: 10px;
+  height: 10px;
+  
+  
+  animation: lamp 1s infinite linear;
+
+}
+.lamp1{
+  top:30px;
+  left: 30px;
+}
+.lamp2{ 
+  top: -30px;
+  left: 60px;
+  transform:rotate(45deg);
+}
+.lamp3{ 
+  top: -50px;
+  left:130px;
+  transform:rotate(90deg);
+}
+.lamp4{
+  top: -30px;
+  left:200px;
+  transform:rotate(-45deg);
+}
+.lamp5{
+  top: 30px;
+  left: 230px;
+}
+
+
+.container-6{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* 모달 */
+.modal{
+  transition: 1s;
+  position: fixed;
+  height: 100vh;
+  opacity: 0;
+  left:0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  
+
+}
+.modal-bg{
+  position: fixed;
+  width: 100%;
+  height: 110vh;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.modal-container{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+
+
+}
+
+.modal-container .modal-header{
+  width: 100%;
+  background-color: #425a73;
+  display: flex;
+  justify-content: space-between;
+  padding :5px 10px 10px 41%;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+  font-size: 30px;
+}
+.modal-container .modal-body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3edf8;
+  border-radius: 0 0 5px 5px;
+}
+.modal-body a {
+  margin: 40px ;
+  display: flex;
+  align-items: center;
+
+}
+.modal-body a img{
+  width: 50px;
+  margin-right: 20px;
+}
+.modal-body p {
+  font-size: 24px;
+  margin :40px;
+  font-weight: bold;
+  color: black;
+}
+@keyframes lamp {
+  0% {background-color: rgb(233, 233, 15);}
+  49% {background-color: rgb(233, 233, 15);}
+  
+  50% {background-color: #000;}
+  100% {background-color: #000;}
+}
+
+@media screen and (max-width:767px){
+  .container{
+    width: 80%;
+    margin:0 auto;
+    height: 700px;
+  }
+  .menu {
+    width: 100%;
+  }
+  .menu_icon{
+    font-size: 40px;
+  }
+  .menu ul li{
+    margin-left: 20px;
+  }
+  .menu ul{
+    left:15%;
+    font-size: 18px;
+  }
+  .menu ul.clicked{
+    top:19px;
+    opacity: 1;
+  }  
+  .container-2 h1{
+    font-size: 80px;
+  }
+  .container-2 p:first-child{
+    right: -10px;
+  }
+
+  .about_me{
+    height: 700px;
+  }
+  .container-3{
+    padding-top: 0;
+    flex-direction: column;
+  }
+  .about_me_left{
+    width: 100%;
+    padding-right: 0;
+    padding-top: 100px;
+    align-items: center;
+    justify-content:center;
+    margin-bottom: 30px;
+    background-color: #bbdcfb;
+  }
+  .about_me_left_bg{
+    height: 300px;
+    width: 100%;
+  }
+  .about_me_left img{
+    height: 200px;
+    width: 200px;
+  }
+  .about_me_left img, .about_me_left h2 {
+    transform: translate(0,0);
+    margin-bottom: 40px;
+  } 
+  .about_me_right{
+    width: 100%;
+  }
+  .about_me_right .text{
+    left: 0;
+  }
+  .arrow{
+    top:20px;
+    left:470px;
+  }
+  .text{
+    padding: 30px;
+  }
+  .skill-content ul li:first-child{
+    width: 80px;
+    margin-bottom: 20px;
+
+  }
+  .skill-content h4{
+    font-size:20px;
+  }
+  .skill-content li ul li{
+    margin-bottom: 10px;
+  }
+  #project{
+    height:1800px;
+  }
+  .projectEl{
+    margin :60px 0 20px;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    top:0;
+    left: 0;
+    right: 0;
+  }
+  #contact{
+    padding-top: 100px;
+    height: 950px;
+    
+  }
+  .btn-modal{
+    transform: scale(0.7);
+  }
+  .modal-container{
+    width: 400px;
+  }
+  .modal-body a, .modal-body p{
+    margin:20px;
+  }
+
+  .modal-container .modal-header{
+    padding: 5px 10px 10px 39%;
+  }
+}
